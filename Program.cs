@@ -70,5 +70,13 @@ else if (resp == "2")
     // Calculate total and average sleep hours
         int totalHours = sleepHours.Sum();
         double averageHours = sleepHours.Average();
+
+    // Display the weekly report
+        Console.WriteLine($"Week of {DateTime.Parse(weekStartDate):MMM, dd, yyyy}");
+        Console.WriteLine(" Su Mo Tu We Th Fr Sa Tot Avg");
+        Console.WriteLine(" -- -- -- -- -- -- -- --- ---");
+
+        Console.WriteLine($"{string.Join(" ", sleepHours)} {totalHours} {averageHours:F1}");
+        Console.WriteLine();
     }
 }
