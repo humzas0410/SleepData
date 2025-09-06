@@ -76,7 +76,7 @@ else if (resp == "2")
         Console.WriteLine(" Su Mo Tu We Th Fr Sa Tot Avg");
         Console.WriteLine(" -- -- -- -- -- -- -- --- ---");
 
-        Console.WriteLine($"{string.Join(" ", sleepHours)} {totalHours} {averageHours:F1}");
+        Console.WriteLine($" {string.Join(" ", sleepHours.Select(h => h.ToString().PadLeft(2)))} {totalHours.ToString().PadLeft(3)} {averageHours:F1}");
         Console.WriteLine();
     }
 }
