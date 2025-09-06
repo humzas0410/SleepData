@@ -56,4 +56,15 @@ else if (resp == "2")
     }
 
     string[] lines = File.ReadAllLines(filePath);
+
+    foreach (string line in lines)
+    {
+    // Split the line into date and hours
+        string[] parts = line.Split(',');
+        string weekStartDate = parts[0];
+        string[] hours = parts[1].Split('|');
+
+    // Convert hours to integers
+        int[] sleepHours = Array.ConvertAll(hours, int.Parse);
+    }
 }
