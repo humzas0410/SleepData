@@ -66,5 +66,9 @@ else if (resp == "2")
 
     // Convert hours to integers
         int[] sleepHours = Array.ConvertAll(hours, int.Parse);
+
+    // Calculate total and average sleep hours
+        int totalHours = sleepHours.Sum();
+        double averageHours = sleepHours.Average();
     }
 }
