@@ -44,5 +44,16 @@ if (resp == "1")
 }
 else if (resp == "2")
 {
-    //TODO: parse data file
+    // parse data file
+    Console.WriteLine("Parsing data file...");
+
+    // Read the file
+    string filePath = "dataDate.txt";
+    if (!File.Exists(filePath))
+    {
+        Console.WriteLine("Data file not found.");
+        return;
+    }
+
+    string[] lines = File.ReadAllLines(filePath);
 }
